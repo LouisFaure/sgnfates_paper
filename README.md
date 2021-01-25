@@ -9,6 +9,7 @@ Code for reproducibiliy
 * SingleCellExperiment 1.6.0
 * scater 1.12.2 
 * pagoda2 0.1.1
+* scde 2.12.0 
 * CellChat 0.0.2
 
 ### python
