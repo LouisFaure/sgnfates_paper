@@ -1,5 +1,9 @@
-on: [push]
+on:
+  push:
+    paths:
+      - '*.ipynb'
 name: Count Lines
+
 
 jobs:
   linecount_job:
