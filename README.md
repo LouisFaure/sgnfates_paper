@@ -9,6 +9,7 @@ Using conda environment, the following code should be run:
 	conda create -n sgnfates -c defaults python=3.8 -y
 	conda activate sgnfates
 	pip install scanpy scFates harmonyTS rpy2
+	pip install git+https://github.com/LouisFaure/anndata2pagoda
 
 Then install the following package in an R session:
 
