@@ -1,0 +1,22 @@
+on: [push]
+name: Count Lines
+
+jobs:
+  linecount_job:
+    runs-on: ubuntu-latest
+    name: Test Run
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Count lines
+        run: |
+          jq '.cells[] | select(.cell_type == "code") .source[]' *.ipynb | grep -v '"\\n"' | wc -l | xargs -I{} echo wget https://img.shields.io/badge/Line%20Counts-{}-blue -O output/badge.svg
+          jq '.cells[] | select(.cell_type == "code") .source[]' *.ipynb | grep -v '"\\n"' | wc -l | xargs -I{} wget https://img.shields.io/badge/Line%20Counts-{}-blue -O output/badge.svg
+
+      - name: Deploy to linecount branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./output
+          publish_branch: linecount
+          github_token: ${{ secrets.GITHUB_TOKEN }}
