@@ -4,13 +4,14 @@ name: Count Lines
 jobs:
   linecount_job:
     runs-on: ubuntu-latest
-    name: Test Run
+    name: Count jupyter notebooks
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Count lines
         run: |
+          mkdir output
           jq '.cells[] | select(.cell_type == "code") .source[]' *.ipynb | grep -v '"\\n"' | wc -l | xargs -I{} echo wget https://img.shields.io/badge/Line%20Counts-{}-blue -O output/badge.svg
           jq '.cells[] | select(.cell_type == "code") .source[]' *.ipynb | grep -v '"\\n"' | wc -l | xargs -I{} wget https://img.shields.io/badge/Line%20Counts-{}-blue -O output/badge.svg
 
