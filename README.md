@@ -6,11 +6,7 @@
 
 Using conda environment, the following code should be run:
 
-	conda create -n sgnfates -c defaults python=3.8 -y
-	conda activate sgnfates
-	pip install scanpy scFates harmonyTS rpy2
+	conda create -n sgnfates -c conda-forge -c r python=3.8 r-mgcv rpy2 -y
+    	conda activate sgnfates
+    	pip install scFates harmonyTS
 	pip install git+https://github.com/LouisFaure/anndata2pagoda
-
-Then install the following package in an R session:
-
-	install.packages('mgcv')
