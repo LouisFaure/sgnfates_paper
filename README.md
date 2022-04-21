@@ -1,6 +1,7 @@
 # SGN fates paper code reproducibility
 [![Line count](https://raw.githubusercontent.com/LouisFaure/sgnfates_paper/linecount/badge.svg)](https://github.com/LouisFaure/sgnfates_paper/actions/workflows/linecount.yml)
 ![DOI](https://img.shields.io/badge/DOI-unpublished-red)
+[![GEO](https://img.shields.io/badge/Dataset-download-green)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE165502)
 
 ## Required packages
 
