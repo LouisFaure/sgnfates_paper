@@ -9,5 +9,5 @@ Using conda environment, the following code should be run:
 
 	conda create -n sgnfates -c conda-forge -c r python=3.8 r-mgcv rpy2 -y
 	conda activate sgnfates
-	pip install scFates==0.4.0 harmonyTS
+	pip install scFates==0.4.0 harmonyTS scanpy==1.9.1 leidenalg==0.8.2
 	pip install git+https://github.com/LouisFaure/anndata2pagoda
